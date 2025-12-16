@@ -1,0 +1,225 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap');
+
+@layer base {
+  :root {
+    /* Luxury Dark Palette */
+    --background: 0 0% 5%;
+    --foreground: 45 20% 95%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 45 20% 95%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 45 20% 95%;
+
+    /* Champagne Gold */
+    --primary: 40 45% 65%;
+    --primary-foreground: 0 0% 5%;
+
+    /* Stone/Muted */
+    --secondary: 35 10% 15%;
+    --secondary-foreground: 45 20% 90%;
+
+    --muted: 30 8% 20%;
+    --muted-foreground: 35 15% 60%;
+
+    /* Warm Accent */
+    --accent: 38 50% 55%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 30 10% 18%;
+    --input: 30 10% 18%;
+    --ring: 40 45% 65%;
+
+    --radius: 0px;
+
+    /* Custom Luxury Tokens */
+    --champagne: 40 45% 65%;
+    --ivory: 45 30% 96%;
+    --charcoal: 0 0% 8%;
+    --charcoal-deep: 0 0% 5%;
+    --stone: 35 15% 45%;
+    --sand: 38 25% 80%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  /* Fade In Animation */
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-slow {
+    animation: fadeIn 1.5s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out forwards;
+  }
+
+  /* Stagger delays */
+  .delay-100 { animation-delay: 100ms; }
+  .delay-200 { animation-delay: 200ms; }
+  .delay-300 { animation-delay: 300ms; }
+  .delay-400 { animation-delay: 400ms; }
+  .delay-500 { animation-delay: 500ms; }
+  .delay-600 { animation-delay: 600ms; }
+  .delay-700 { animation-delay: 700ms; }
+
+  /* Luxury text styles */
+  .text-display {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.03em;
+  }
+
+  .text-editorial {
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .text-refined {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  /* Hover effects */
+  .hover-lift {
+    @apply transition-transform duration-500 ease-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-4px);
+  }
+
+  .hover-glow {
+    @apply transition-all duration-500;
+  }
+
+  .hover-glow:hover {
+    box-shadow: 0 0 40px hsl(var(--champagne) / 0.15);
+  }
+
+  /* Image zoom on hover */
+  .img-zoom {
+    @apply overflow-hidden;
+  }
+
+  .img-zoom img {
+    @apply transition-transform duration-700 ease-out;
+  }
+
+  .img-zoom:hover img {
+    transform: scale(1.05);
+  }
+
+  /* Luxury divider */
+  .divider-luxury {
+    @apply w-16 h-px bg-gradient-to-r from-transparent via-champagne to-transparent;
+  }
+
+  /* Gold text gradient */
+  .text-gradient-gold {
+    background: linear-gradient(135deg, hsl(var(--champagne)) 0%, hsl(var(--sand)) 50%, hsl(var(--champagne)) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+@keyframes parallax {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-20%);
+  }
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--charcoal-deep));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--champagne) / 0.5);
+}
