@@ -42,6 +42,11 @@ const Footer = () => {
             Luxury Visual Marketing Partner
           </p>
         </div>
+
+        {/* Developer Credit */}
+        <p className="mt-6 text-center font-body text-[10px] font-light text-muted-foreground/40 tracking-wider">
+          Developed by <span className="text-champagne/50">Dave Gardonia</span>
+        </p>
       </div>
     </footer>
   );
