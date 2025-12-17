@@ -19,7 +19,7 @@ const portfolioVideos: VideoItem[] = [
     id: '1',
     title: 'Villa Paraíso',
     category: 'Private Residence',
-    thumbnailUrl: '/thumnails/AI Villa.png',
+    thumbnailUrl: 'https://vz-9a81c5ce-46a.b-cdn.net/f11a8152-2c43-4f80-9817-40fb7c04c915/thumbnail_59379444.jpg',
     videoUrl: 'https://player.mediadelivery.net/embed/564906/f11a8152-2c43-4f80-9817-40fb7c04c915',
     platform: 'bunny'
   },
