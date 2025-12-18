@@ -17,7 +17,7 @@ const AboutSection = () => {
         >
           {/* Photo placeholder - replace src with your image */}
           <img 
-            src="/David.jpg"
+            src="ass/David.jpg"
             alt="David Flores"
             className="h-full w-full object-cover"
           />
@@ -46,7 +46,7 @@ const AboutSection = () => {
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
             }`}
           >
-            Filmmaker & Visual Strategist
+            Luxury Visual Marketing Partner
           </p>
 
           {/* Decorative Line */}
@@ -61,7 +61,7 @@ const AboutSection = () => {
               isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
             }`}
           >
-            I'm David Flores, a filmmaker and visual strategist based in Los Cabos.
+           I'm David Flores, your luxury visual marketing partner, blending creativity and strategy to showcase your brand at its finest
           </p>
           <p 
             className={`mt-6 font-body text-lg font-light leading-relaxed text-muted-foreground transition-all duration-700 delay-300 ${

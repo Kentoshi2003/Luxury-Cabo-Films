@@ -29,7 +29,7 @@ const Footer = () => {
             href="mailto:hello@davidflores.film"
             className="mt-8 font-body text-sm font-light text-foreground/80 transition-colors duration-300 hover:text-champagne"
           >
-            hello@davidflores.film
+            davidflvan18@gmail.com
           </a>
         </div>
 
@@ -42,11 +42,6 @@ const Footer = () => {
             Luxury Visual Marketing Partner
           </p>
         </div>
-
-        {/* Developer Credit */}
-        <p className="mt-6 text-center font-body text-[10px] font-light text-muted-foreground/40 tracking-wider">
-          Developed by <span className="text-champagne/50">Dave Gardonia</span>
-        </p>
       </div>
     </footer>
   );

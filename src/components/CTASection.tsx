@@ -6,8 +6,8 @@ import { toast } from 'sonner';
 const CTASection = () => {
   const { ref, isVisible } = useScrollAnimation({ threshold: 0.2 });
   const [copied, setCopied] = useState(false);
-  const email = 'hello@davidflores.film';
-  const phone = '+52 624 123 4567';
+  const email = 'davidflvan18@gmail.com';
+  const phone = '+52 624 210 6519';
 
   const copyEmail = async () => {
     await navigator.clipboard.writeText(email);

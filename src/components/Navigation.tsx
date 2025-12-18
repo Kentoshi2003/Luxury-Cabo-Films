@@ -118,7 +118,7 @@ const Navigation = () => {
                 className="mb-16"
               >
                 <img 
-                  src="/placeholder.svg"
+                  src="/logo.png"
                   alt="David Flores Logo"
                   className="h-12 w-auto"
                 />
@@ -152,10 +152,10 @@ const Navigation = () => {
                 className="absolute bottom-12 text-center"
               >
                 <a 
-                  href="mailto:hello@davidflores.film"
+                  href="mailto:davidflvan18@gmail.com"
                   className="font-body text-sm font-light text-muted-foreground transition-colors duration-300 hover:text-champagne"
                 >
-                  hello@davidflores.film
+                  davidflvan18@gmail.com 
                 </a>
               </motion.div>
             </div>
