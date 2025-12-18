@@ -17,7 +17,7 @@ const AboutSection = () => {
         >
           {/* Photo placeholder - replace src with your image */}
           <img 
-            src="ass/David.jpg"
+            src="/David.jpg"
             alt="David Flores"
             className="h-full w-full object-cover"
           />
