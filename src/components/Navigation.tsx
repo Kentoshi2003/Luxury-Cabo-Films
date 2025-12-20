@@ -31,11 +31,19 @@ const Navigation = () => {
     setIsMobileMenuOpen(false);
     const element = document.getElementById(sectionId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      const headerOffset = 100; // Account for fixed navigation height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
     }
   };
 
   const navLinks = [
+    { id: 'services', label: 'Services' },
     { id: 'portfolio', label: 'Portfolio' },
     { id: 'about', label: 'About' },
     { id: 'contact', label: 'Contact' },
@@ -51,7 +59,7 @@ const Navigation = () => {
         }`}
       >
         <div className="mx-auto flex max-w-7xl items-center justify-between">
-          {/* Logo - replace with your logo image */}
+          {/* Logo */}
           <button 
             onClick={() => scrollToSection('hero')}
             className="transition-opacity duration-300 hover:opacity-80"
@@ -118,10 +126,10 @@ const Navigation = () => {
                 className="mb-16"
               >
                 <img 
-                  src="/logo.png"
-                  alt="David Flores Logo"
-                  className="h-12 w-auto"
-                />
+              src="/logo.png"
+              alt="David Flores Logo"
+              className="h-8 w-auto"
+            />
                 <p className="text-refined mt-4 text-center text-[10px] text-muted-foreground">
                   Los Cabos, Mexico
                 </p>
@@ -155,7 +163,7 @@ const Navigation = () => {
                   href="mailto:davidflvan18@gmail.com"
                   className="font-body text-sm font-light text-muted-foreground transition-colors duration-300 hover:text-champagne"
                 >
-                  davidflvan18@gmail.com 
+                  davidflvan18@gmail.com
                 </a>
               </motion.div>
             </div>

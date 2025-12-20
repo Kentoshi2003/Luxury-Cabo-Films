@@ -10,6 +10,7 @@ import TestimonialsSection from '@/components/TestimonialsSection';
 import CTASection from '@/components/CTASection';
 import Footer from '@/components/Footer';
 import LoadingScreen from '@/components/LoadingScreen';
+import FloatingCTA from '@/components/FloatingCTA';
 
 const Index = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -27,9 +28,13 @@ const Index = () => {
           <HeroSection />
         </div>
         
-        <WhatIDoSection />
+        <div id="what-i-do">
+          <WhatIDoSection />
+        </div>
         
-        <ServicesSection />
+        <div id="services">
+          <ServicesSection />
+        </div>
         
         <div id="portfolio">
           <VideoPortfolioSection />
@@ -39,15 +44,22 @@ const Index = () => {
           <AboutSection />
         </div>
         
-        <WhyWorkWithMeSection />
+        <div id="why-work-with-me">
+          <WhyWorkWithMeSection />
+        </div>
         
-        <TestimonialsSection />
+        <div id="testimonials">
+          <TestimonialsSection />
+        </div>
         
         <div id="contact">
           <CTASection />
         </div>
         
         <Footer />
+        
+        {/* Floating CTA Button */}
+        <FloatingCTA />
       </main>
     </>
   );

@@ -19,17 +19,25 @@ const Footer = () => {
 
           {/* Description */}
           <p className="max-w-xl font-body text-sm font-light leading-relaxed text-muted-foreground">
-            Luxury real estate videography, cinematic property films, architectural photography, 
-            and visual marketing services across Cabo San Lucas, San José del Cabo, and the 
-            Los Cabos Corridor.
+            Luxury real estate, developments, and lifestyle. High-end visual and digital marketing 
+            for properties and brands that demand excellence across Cabo San Lucas, San José del Cabo, 
+            and the Los Cabos Corridor.
           </p>
 
           {/* Email */}
           <a 
-            href="mailto:hello@davidflores.film"
+            href="mailto:davidflvan18@gmail.com"
             className="mt-8 font-body text-sm font-light text-foreground/80 transition-colors duration-300 hover:text-champagne"
           >
             davidflvan18@gmail.com
+          </a>
+          
+          {/* Phone */}
+          <a 
+            href="tel:+526242106519"
+            className="mt-2 font-body text-sm font-light text-foreground/80 transition-colors duration-300 hover:text-champagne"
+          >
+            +52 624 210 6519
           </a>
         </div>
 
@@ -42,6 +50,11 @@ const Footer = () => {
             Luxury Visual Marketing Partner
           </p>
         </div>
+
+        {/* Developer Credit */}
+        <p className="mt-6 text-center font-body text-[10px] font-light text-muted-foreground/40 tracking-wider">
+          Developed by <span className="text-champagne/50">Luxury Cabo Films</span>
+        </p>
       </div>
     </footer>
   );

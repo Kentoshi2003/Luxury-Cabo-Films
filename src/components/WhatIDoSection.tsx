@@ -15,7 +15,7 @@ const WhatIDoSection = () => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'
           }`}
         >
-          Services
+          The Work
         </span>
 
         {/* Section Title */}
@@ -24,7 +24,7 @@ const WhatIDoSection = () => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
           }`}
         >
-          High-End Visual Marketing for{' '}
+          High-End Visual & Digital Marketing for{' '}
           <span className="text-editorial">Luxury Real Estate</span>
         </h2>
 
@@ -41,16 +41,17 @@ const WhatIDoSection = () => {
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
           }`}
         >
-          I create cinematic video, photography, and digital assets for luxury real estate 
-          professionals, developers, and lifestyle brands in Los Cabos.
+          I create high-end visual and digital marketing assets for luxury real estate, 
+          pre-construction developments, and lifestyle brands in Los Cabos.
         </p>
         <p 
           className={`mx-auto mt-6 max-w-2xl font-body text-lg font-light leading-relaxed text-muted-foreground transition-all duration-700 delay-400 ${
             isVisible ? 'translate-y-0 opacity-100' : 'translate-y-6 opacity-0'
           }`}
         >
-          My work focuses on selling vision, elevating brand perception, and helping 
-          properties attract the right buyers and investors.
+          My work is focused on <span className="text-champagne">selling vision</span>, 
+          elevating brand perception, and helping properties and projects 
+          <span className="text-champagne"> attract the right buyers and investors</span>.
         </p>
       </div>
     </section>

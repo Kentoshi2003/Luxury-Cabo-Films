@@ -1,6 +1,7 @@
 import { useRef } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { Button } from '@/components/ui/button';
+import { ArrowRight, Play } from 'lucide-react';
 import heroImage from '@/assets/hero-luxury-villa.jpg';
 
 const HeroSection = () => {
@@ -13,6 +14,7 @@ const HeroSection = () => {
   // Parallax effect for background image
   const y = useTransform(scrollYProgress, [0, 1], ['0%', '30%']);
   const opacity = useTransform(scrollYProgress, [0, 0.8], [1, 0]);
+  const scale = useTransform(scrollYProgress, [0, 1], [1, 1.1]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -26,7 +28,7 @@ const HeroSection = () => {
       {/* Background Image with Parallax */}
       <motion.div 
         className="absolute inset-0"
-        style={{ y }}
+        style={{ y, scale }}
       >
         <img
           src={heroImage}
@@ -39,7 +41,7 @@ const HeroSection = () => {
 
       {/* Content with fade on scroll */}
       <motion.div 
-        className="relative z-10 flex h-full flex-col items-center justify-center px-6 text-center"
+        className="relative z-10 flex h-full flex-col items-center justify-center px-4 sm:px-6 text-center"
         style={{ opacity }}
       >
         {/* Subtle top label */}
@@ -47,7 +49,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-refined mb-8 text-xs text-muted-foreground"
+          className="text-refined mb-4 sm:mb-8 text-[10px] sm:text-xs text-muted-foreground"
         >
           Los Cabos, Mexico
         </motion.span>
@@ -80,35 +82,62 @@ const HeroSection = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="mt-12 flex flex-col items-center gap-4 sm:flex-row sm:gap-6"
+          className="mt-6 sm:mt-10 lg:mt-8 flex flex-col items-center gap-3 sm:flex-row sm:gap-6 w-full sm:w-auto px-4 sm:px-0"
         >
           <Button 
             variant="luxury-solid" 
             size="luxury"
             onClick={() => scrollToSection('contact-form')}
+            className="group w-full sm:w-auto text-sm sm:text-base"
           >
-            Work With Me
+            <span>Elevate Your Property</span>
+            <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
           </Button>
           <Button 
             variant="luxury-minimal" 
             size="luxury"
             onClick={() => scrollToSection('portfolio')}
+            className="group w-full sm:w-auto text-sm sm:text-base"
           >
-            View Portfolio
+            <Play className="mr-2 h-4 w-4" fill="currentColor" />
+            <span>View Portfolio</span>
           </Button>
+        </motion.div>
+
+        {/* Trust indicators */}
+        <motion.div 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.8, delay: 1.2 }}
+          className="mt-8 sm:mt-12 lg:mt-16 flex items-center gap-3 sm:gap-8 px-4"
+        >
+          <div className="text-center">
+            <span className="font-display text-base sm:text-2xl text-champagne">50+</span>
+            <p className="text-refined text-[8px] sm:text-[10px] text-muted-foreground whitespace-nowrap">Properties</p>
+          </div>
+          <div className="h-5 sm:h-8 w-px bg-border/50" />
+          <div className="text-center">
+            <span className="font-display text-base sm:text-2xl text-champagne">30%</span>
+            <p className="text-refined text-[8px] sm:text-[10px] text-muted-foreground whitespace-nowrap">Faster Sales</p>
+          </div>
+          <div className="h-5 sm:h-8 w-px bg-border/50" />
+          <div className="text-center">
+            <span className="font-display text-base sm:text-2xl text-champagne">5x</span>
+            <p className="text-refined text-[8px] sm:text-[10px] text-muted-foreground whitespace-nowrap">Engagement</p>
+          </div>
         </motion.div>
 
         {/* Scroll Indicator */}
         <motion.div 
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-          className="absolute bottom-12 left-1/2 -translate-x-1/2"
+          transition={{ duration: 0.8, delay: 1.4 }}
+          className="absolute bottom-4 sm:bottom-8 left-1/2 -translate-x-1/2"
         >
-          <div className="flex flex-col items-center gap-2">
-            <span className="text-refined text-[10px] text-muted-foreground">Scroll</span>
+          <div className="flex flex-col items-center gap-1 sm:gap-2">
+            <span className="text-refined text-[9px] sm:text-[10px] text-muted-foreground">Scroll</span>
             <motion.div 
-              animate={{ height: [48, 60, 48] }}
+              animate={{ height: [32, 44, 32] }}
               transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
               className="w-px bg-gradient-to-b from-champagne/50 to-transparent" 
             />
