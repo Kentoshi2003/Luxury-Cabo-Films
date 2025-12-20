@@ -6,7 +6,7 @@ const Footer = () => {
         <div className="flex flex-col items-center text-center">
           {/* Brand Name */}
           <h3 className="font-display text-2xl text-foreground">
-            David Flores
+            Luxury Cabo Films
           </h3>
           
           {/* Location */}
@@ -44,7 +44,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-border pt-8 sm:flex-row">
           <p className="font-body text-xs font-light text-muted-foreground/60">
-            © {new Date().getFullYear()} David Flores. All rights reserved.
+            © {new Date().getFullYear()} Luxury Cabo Films. All rights reserved.
           </p>
           <p className="text-refined text-[10px] text-muted-foreground/40">
             Luxury Visual Marketing Partner
