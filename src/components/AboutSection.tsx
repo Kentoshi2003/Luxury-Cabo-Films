@@ -30,7 +30,7 @@ const AboutSection = () => {
           <div className="relative overflow-hidden bg-secondary">
             {/* Photo placeholder - replace src with your image */}
             <img 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
+              src="/David.jpg"
               alt="David Flores - Filmmaker & Visual Strategist"
               className="w-full h-auto object-contain sm:aspect-[3/4] sm:object-cover sm:h-full"
             />
