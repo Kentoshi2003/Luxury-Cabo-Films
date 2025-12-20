@@ -27,12 +27,12 @@ const AboutSection = () => {
           transition={{ duration: 0.8, ease: [0.25, 0.1, 0.25, 1] }}
           className="relative"
         >
-          <div className="relative aspect-[4/3] sm:aspect-[3/4] overflow-hidden bg-secondary">
+          <div className="relative overflow-hidden bg-secondary">
             {/* Photo placeholder - replace src with your image */}
             <img 
-              src="/David.jpg"
+              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&q=80"
               alt="David Flores - Filmmaker & Visual Strategist"
-              className="h-full w-full object-cover"
+              className="w-full h-auto object-contain sm:aspect-[3/4] sm:object-cover sm:h-full"
             />
             {/* Overlay gradient */}
             <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
